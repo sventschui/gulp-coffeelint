@@ -2,6 +2,11 @@ language: node_js
 node_js:
     - '0.10'
     - '0.11'
+before_install:
+    - sudo add-apt-repository ppa:vincent-c/ponysay -y
+    - sudo apt-get update -qq
+    - sudo apt-get install -y ponysay
+    - ponysay LETS GO
 before_script:
     - npm config set coverage true
 after_success:
